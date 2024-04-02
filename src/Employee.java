@@ -4,14 +4,14 @@ public class Employee {
     private String fullNameEmployee;
     private int departmentNumberEmployee;
     private int salaryEmployee;
-    private static int enumerator;
-    private int id;
+    static int enumerator=1;
+    private int id=1;
 
     public Employee(String fullNameEmployee, int departmentNumberEmployee, int salaryEmployee) {
         this.fullNameEmployee = fullNameEmployee;
         this.departmentNumberEmployee = departmentNumberEmployee;
         this.salaryEmployee = salaryEmployee;
-        id = ++enumerator;
+        this.id = enumerator++;
     }
 
     public String getFullNameEmployee() {
@@ -52,6 +52,6 @@ public class Employee {
         return Objects.hash(fullNameEmployee,departmentNumberEmployee, salaryEmployee, id);
     }
     public String toString(){
-        return  "Номер отдела: " + departmentNumberEmployee + ". Сотрудник (ФИО):'" + fullNameEmployee  + ", зарплата: " + salaryEmployee + ", id=" + id;
+        return  "Номер отдела: " + departmentNumberEmployee + ". Сотрудник (ФИО):'" + fullNameEmployee  + ", зарплата: " + salaryEmployee + ".";
     }
 }

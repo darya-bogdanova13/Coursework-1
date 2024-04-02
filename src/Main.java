@@ -3,16 +3,16 @@ public class Main {
     private static Employee[] employees = new Employee[10];
 
     static void base() {
-        employees[0] = new Employee("Безрукавый Вадим Петрович ", 1, 50000);
-        employees[1] = new Employee("Коток Алексей Юрьевич ", 2, 90000);
-        employees[2] = new Employee("Реунов Константин Юрьевич ", 3, 70000);
-        employees[3] = new Employee("Постов Андрей Юрьевич ", 4, 60000);
-        employees[4] = new Employee("Филиппов Алексей Павлович ", 5, 50000);
-        employees[5] = new Employee("Чугунов Сергей Вячеславович ", 6, 70000);
-        employees[6] = new Employee("Сырятов Денис Сергеевич ", 7, 50000);
-        employees[7] = new Employee("Ищенко Александр Сергеевич ", 8, 40000);
-        employees[8] = new Employee("Соловьев Дмитрий Геннадьевич ", 9, 50000);
-        employees[9] = new Employee("Корников Алексей Александрович ", 10, 100000);
+        employees[0] = new Employee("Безрукавый Вадим Петрович ", Employee.enumerator, 50000);
+        employees[1] = new Employee("Коток Алексей Юрьевич ", Employee.enumerator, 90000);
+        employees[2] = new Employee("Реунов Константин Юрьевич ", Employee.enumerator , 70000);
+        employees[3] = new Employee("Постов Андрей Юрьевич ", Employee.enumerator, 60000);
+        employees[4] = new Employee("Филиппов Алексей Павлович ", Employee.enumerator, 50000);
+        employees[5] = new Employee("Чугунов Сергей Вячеславович ", Employee.enumerator, 70000);
+        employees[6] = new Employee("Сырятов Денис Сергеевич ", Employee.enumerator, 50000);
+        employees[7] = new Employee("Ищенко Александр Сергеевич ", Employee.enumerator, 40000);
+        employees[8] = new Employee("Соловьев Дмитрий Геннадьевич ", Employee.enumerator, 50000);
+        employees[9] = new Employee("Корников Алексей Александрович ", Employee.enumerator, 100000);
     }
 
     public static void main(String[] args) {
@@ -53,9 +53,4 @@ public class Main {
             System.out.println("Минимальная зарплата у сотрудника: " + employeesMinSalary + " равна: " + minSalaryEmployee);
             System.out.println("Максимальная зарплата у сотрудника: " + employeesMaxSalary + " равна: " + maxSalaryEmployee);
         }
-        private static void printFullNameEmployee(){
-        for (Employee employee: employees){
-            System.out.println("ФИО сотрудника: " + employee.getFullNameEmployee());
-        }
     }
-}
