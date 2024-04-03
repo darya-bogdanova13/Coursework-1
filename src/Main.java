@@ -3,16 +3,16 @@ public class Main {
     private static Employee[] employees = new Employee[10];
 
     static void base() {
-        employees[0] = new Employee("Безрукавый Вадим Петрович ", Employee.enumerator, 50000);
-        employees[1] = new Employee("Коток Алексей Юрьевич ", Employee.enumerator, 90000);
-        employees[2] = new Employee("Реунов Константин Юрьевич ", Employee.enumerator , 70000);
-        employees[3] = new Employee("Постов Андрей Юрьевич ", Employee.enumerator, 60000);
-        employees[4] = new Employee("Филиппов Алексей Павлович ", Employee.enumerator, 50000);
-        employees[5] = new Employee("Чугунов Сергей Вячеславович ", Employee.enumerator, 70000);
-        employees[6] = new Employee("Сырятов Денис Сергеевич ", Employee.enumerator, 50000);
-        employees[7] = new Employee("Ищенко Александр Сергеевич ", Employee.enumerator, 40000);
-        employees[8] = new Employee("Соловьев Дмитрий Геннадьевич ", Employee.enumerator, 50000);
-        employees[9] = new Employee("Корников Алексей Александрович ", Employee.enumerator, 100000);
+        employees[0] = new Employee("Безрукавый Вадим Петрович ", Employee.enumerator, 50000, 1);
+        employees[1] = new Employee("Коток Алексей Юрьевич ", Employee.enumerator, 90000, 2);
+        employees[2] = new Employee("Реунов Константин Юрьевич ", Employee.enumerator , 70000, 3);
+        employees[3] = new Employee("Постов Андрей Юрьевич ", Employee.enumerator, 60000, 4);
+        employees[4] = new Employee("Филиппов Алексей Павлович ", Employee.enumerator, 50000, 5);
+        employees[5] = new Employee("Чугунов Сергей Вячеславович ", Employee.enumerator, 70000, 1);
+        employees[6] = new Employee("Сырятов Денис Сергеевич ", Employee.enumerator, 50000, 2);
+        employees[7] = new Employee("Ищенко Александр Сергеевич ", Employee.enumerator, 40000, 3);
+        employees[8] = new Employee("Соловьев Дмитрий Геннадьевич ", Employee.enumerator, 50000, 4);
+        employees[9] = new Employee("Корников Алексей Александрович ", Employee.enumerator, 100000, 5);
     }
 
     public static void main(String[] args) {

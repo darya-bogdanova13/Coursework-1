@@ -6,12 +6,14 @@ public class Employee {
     private int salaryEmployee;
     static int enumerator=1;
     private int id=1;
+    private int dept;
 
-    public Employee(String fullNameEmployee, int departmentNumberEmployee, int salaryEmployee) {
+    public Employee(String fullNameEmployee, int departmentNumberEmployee, int salaryEmployee, int dept) {
         this.fullNameEmployee = fullNameEmployee;
         this.departmentNumberEmployee = departmentNumberEmployee;
         this.salaryEmployee = salaryEmployee;
         this.id = enumerator++;
+        this.dept = dept;
     }
 
     public String getFullNameEmployee() {
@@ -20,6 +22,9 @@ public class Employee {
 
     public int getDepartmentNumberEmployee() {
         return this.departmentNumberEmployee;
+    }
+    public int getDept() {
+        return this.dept;
     }
 
     public int getSalaryEmployee() {
@@ -52,6 +57,6 @@ public class Employee {
         return Objects.hash(fullNameEmployee,departmentNumberEmployee, salaryEmployee, id);
     }
     public String toString(){
-        return  "Номер отдела: " + departmentNumberEmployee + ". Сотрудник (ФИО):'" + fullNameEmployee  + ", зарплата: " + salaryEmployee + ".";
+        return  "Работник № " + departmentNumberEmployee + ". Сотрудник (ФИО):'" + fullNameEmployee  + ", зарплата: " + salaryEmployee + ", отдел " + dept + ".";
     }
 }
