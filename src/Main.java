@@ -56,7 +56,7 @@ public class Main {
         for (int i = 1; i < employees.length; i++) {
             if (employees[i].getSalaryEmployee() < minSalaryEmployee) {
                 minSalaryEmployee = employees[i].getSalaryEmployee();
-                employeesMinSalary = employees[i].getFullNameEmployee();
+                employeesMinSalary = String.valueOf(employees[i]);
             }
         }
         return employeesMinSalary;
@@ -68,7 +68,7 @@ public class Main {
         for (int i = 1; i < employees.length; i++) {
             if (employees[i].getSalaryEmployee() > maxSalaryEmployee) {
                 maxSalaryEmployee = employees[i].getSalaryEmployee();
-                employeesMaxSalary = employees[i].getFullNameEmployee();
+                employeesMaxSalary = String.valueOf(employees[i]);
             }
         }
         return employeesMaxSalary;
