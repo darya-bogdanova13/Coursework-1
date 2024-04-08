@@ -44,10 +44,11 @@ public class Main {
     }
     private static int printEqualSalary() {
         int sum = 0;
+        int sum1 = 0;
         for (int i = 0; i < employees.length; i++) {
-            sum += employees[i].getSalaryEmployee() / employees.length;
+            sum1 = (sum += employees[i].getSalaryEmployee()) / employees.length;
         }
-        return sum;
+        return sum1;
     }
 
     private static String printMinSalaryEmployee() {
