@@ -37,43 +37,37 @@ public class Main {
 
     private static int getSalaryEmployees() {
         int sum = 0;
-        for(int i = 0; i < employees.length; i++) {
+        for (int i = 0; i < employees.length; i++) {
             sum += employees[i].getSalaryEmployee();
         }
         return sum;
     }
+
     private static int printEqualSalary() {
         int sum = 0;
-        int sum1 = 0;
         for (int i = 0; i < employees.length; i++) {
-            sum1 = (sum += employees[i].getSalaryEmployee()) / employees.length;
+            sum += employees[i].getSalaryEmployee();
         }
-        return sum1;
+        sum = sum / employees.length;
+        return sum;
     }
-
-    private static String printMinSalaryEmployee() {
-        int minSalaryEmployee = employees[0].getSalaryEmployee();
-        String employeesMinSalary = employees[0].getFullNameEmployee();
-        for (int i = 1; i < employees.length; i++) {
+    public static int printMinSalaryEmployee() {
+        int minSalaryEmployee = Integer.MAX_VALUE;
+        for (int i = 0; i < employees.length; i++)
             if (employees[i].getSalaryEmployee() < minSalaryEmployee) {
                 minSalaryEmployee = employees[i].getSalaryEmployee();
-                employeesMinSalary = String.valueOf(employees[i]);
             }
-        }
-        return employeesMinSalary;
+        return minSalaryEmployee;
     }
-
-    private static String printMaxSalaryEmployee() {
-        int maxSalaryEmployee = employees[0].getSalaryEmployee();
-        String employeesMaxSalary = employees[0].getFullNameEmployee();
-        for (int i = 1; i < employees.length; i++) {
-            if (employees[i].getSalaryEmployee() > maxSalaryEmployee) {
-                maxSalaryEmployee = employees[i].getSalaryEmployee();
-                employeesMaxSalary = String.valueOf(employees[i]);
+        public static int printMaxSalaryEmployee() {
+            int maxSalaryEmployee = Integer.MIN_VALUE;
+            for (int i = 0; i < employees.length; i++) {
+                if (employees[i].getSalaryEmployee() > maxSalaryEmployee) {
+                    maxSalaryEmployee = employees[i].getSalaryEmployee();
+                }
             }
+                return maxSalaryEmployee;
         }
-        return employeesMaxSalary;
-    }
 
     private static void printEmployeeFullName() {
         for (int i = 0; i < employees.length; i++) {
