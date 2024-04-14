@@ -51,22 +51,27 @@ public class Main {
         sum = sum / employees.length;
         return sum;
     }
-    public static int printMinSalaryEmployee() {
-        int minSalaryEmployee = Integer.MAX_VALUE;
-        for (int i = 0; i < employees.length; i++)
-            if (employees[i].getSalaryEmployee() < minSalaryEmployee) {
-                minSalaryEmployee = employees[i].getSalaryEmployee();
+    public static Employee printMinSalaryEmployee() {
+        int minSalary = Integer.MAX_VALUE;
+        Employee employeeWithMinSalary = null;
+        for (int i = 0; i < employees.length; i++) {
+            if (employees[i].getSalaryEmployee() < minSalary) {
+                minSalary = employees[i].getSalaryEmployee();
+                employeeWithMinSalary = employees[i];
             }
-        return minSalaryEmployee;
+        }
+        return employeeWithMinSalary;
     }
-        public static int printMaxSalaryEmployee() {
-            int maxSalaryEmployee = Integer.MIN_VALUE;
+        public static Employee printMaxSalaryEmployee() {
+            int maxSalary = Integer.MIN_VALUE;
+            Employee employeeWithMaxSalary = null;
             for (int i = 0; i < employees.length; i++) {
-                if (employees[i].getSalaryEmployee() > maxSalaryEmployee) {
-                    maxSalaryEmployee = employees[i].getSalaryEmployee();
+                if (employees[i].getSalaryEmployee() > maxSalary) {
+                    maxSalary = employees[i].getSalaryEmployee();
+                    employeeWithMaxSalary = employees[i];
                 }
             }
-                return maxSalaryEmployee;
+                return employeeWithMaxSalary;
         }
 
     private static void printEmployeeFullName() {
